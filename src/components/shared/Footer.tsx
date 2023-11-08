@@ -9,7 +9,7 @@ const Footer = () => {
 	return (
 		<div className="bg-[#FF6801]">
 			<div className="container">
-				<div className="grid grid-cols-4 gap-[30px]">
+				<div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 max-sm:gap-[10px] gap-[30px] py-[50px] lg:py-[30px]">
 					<div className="box">
 						<Image src={logo} alt="logo" width={180} height={180} />
 						<p className="text-black my-[25px] font-light text-[14px]">

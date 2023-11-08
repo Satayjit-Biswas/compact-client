@@ -17,7 +17,7 @@ const config: Config = {
 			center: true,
 
 			// or have default horizontal padding
-			padding: "2rem",
+			padding: "1rem",
 		},
 		screens: {
 			sm: "600px",

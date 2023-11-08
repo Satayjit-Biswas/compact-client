@@ -19,11 +19,6 @@ const links = [
 		url: "/price-comparison",
 	},
 	{
-		id: 4,
-		title: "Blog",
-		url: "/blog",
-	},
-	{
 		id: 5,
 		title: "About",
 		url: "/about",
@@ -38,7 +33,7 @@ const Navbar = () => {
 	return (
 		<div className="shadow shadow-[#ff670163] border-b-[1px] border-[#ff6701b2]">
 			<div className="container">
-				<div className="flex items-center justify-between h-[80px]">
+				<div className="flex items-center justify-between h-[70px]  lg:h-[80px]">
 					<div className="loge">
 						<Link href="/">
 							<Image
@@ -46,23 +41,21 @@ const Navbar = () => {
 								alt="logo"
 								width={180}
 								height={180}
+								className="w-[120px] lg:w-[180px] md:w-[130px] "
 							/>
 						</Link>
 					</div>
 					<div className="menu">
 						{links.map((link) => (
 							<Link
-								className="mx-[15px] capitalize navbar__link"
+								className="capitalize navbar__link"
 								key={link.id}
 								href={link.url}
 							>
 								{link.title}
 							</Link>
 						))}
-						<Link
-							href="#"
-							className="inline-block bg-[#FF6801] duration-[300ms] hover:bg-[#d0611e] px-[18px] py-[7px] text-white capitalize rounded-[5px]"
-						>
+						<Link href="#" className="custom_btn ml-[5px]">
 							logo
 						</Link>
 					</div>

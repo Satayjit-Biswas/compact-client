@@ -1,12 +1,13 @@
 import Footer from "@/components/shared/Footer";
+import Nav from "@/components/shared/Nav";
 import Navbar from "@/components/shared/Navbar";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 
 const poppins = Poppins({
-    subsets: ["latin"],
-    weight: "500"
+	subsets: ["latin"],
+	weight: "500",
 });
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({
 		<html lang="en">
 			<body className={poppins.className}>
 				<Navbar />
+				<Nav></Nav>
 				<div className="min-h-screen">{children}</div>
 				<Footer />
 			</body>
