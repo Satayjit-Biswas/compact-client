@@ -4,11 +4,37 @@
 
 @layer components {
 	.custom_btn {
-		@apply inline-block bg-[#FF6801] duration-[300ms] hover:bg-[#d0611e] px-[10px] lg:px-[18px] py-[7px] text-white text-[15px] capitalize rounded-[5px];
+		@apply inline-block bg-[#FF6801] duration-[300ms] hover:bg-[#d0611e] px-[10px] lg:px-[18px] py-[7px] text-white text-[15px] capitalize rounded-[0px];
 	}
 	/* header css  */
+	/* header menu-bar */
+
 	.navbar__link {
 		@apply relative after:duration-300 after:absolute after:content-[''] after:w-[0] hover:after:w-[100%] after:h-[2px] after:left-0 after:bottom-[-1px] after:bg-[#FF6801] text-[15px] mx-[8px] lg:mx-[15px];
+	}
+
+	/* header navbar */
+	.navbar {
+		@apply relative w-[30px] h-[25px] cursor-pointer z-40 overflow-hidden;
+	}
+	.navbar span {
+		@apply after:absolute after:content-[''] after:w-[100%] after:h-[3px] after:bg-[#000000] after:duration-[.3s] pointer-events-none;
+	}
+	.navbar_span1 {
+		@apply after:left-0 after:top-[0px];
+	}
+	.navbar_span2 {
+		@apply after:left-0 after:top-[50%] after:translate-y-[-50%]  group-hover:after:left-[8px];
+	}
+	.navbar_span3 {
+		@apply after:left-0 after:bottom-[0px];
+	}
+	/* header tab-manu */
+	.tab-menu {
+		@apply fixed top-0 left-0 bg-[#fff] w-[100%] h-[100%] z-10 duration-[.4s] flex flex-col items-center justify-center;
+	}
+	.tab_navbar__link {
+		@apply relative inline-block after:duration-300 after:absolute after:content-[''] after:w-[0] hover:after:w-[100%] after:h-[2px] after:left-0 after:bottom-[-1px] after:bg-[#FF6801] text-[18px] mx-[8px] my-[10px];
 	}
 	/* footer css */
 	.sociel a {
