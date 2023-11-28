@@ -2,6 +2,7 @@ import Footer from "@/components/shared/Footer";
 import Navbar from "@/components/shared/Navbar";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import React from "react";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -23,7 +24,7 @@ export default function RootLayout({
 		<html lang="en">
 			<body className={poppins.className}>
 				<Navbar />
-				<div className="min-h-screen">{children}</div>
+				<div className="min-h-[90vh]">{children}</div>
 				<Footer />
 			</body>
 		</html>

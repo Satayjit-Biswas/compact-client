@@ -34,6 +34,7 @@ const links = [
 ];
 const Navbar = () => {
 	const [navbar, setNavbar] = useState(false);
+	const [navsticky, setnavsticky] = useState(false);
 	const ref = useRef(null);
 
 	useEffect(() => {
@@ -48,16 +49,23 @@ const Navbar = () => {
 			handleOutSideClick(e);
 		};
 		window.addEventListener("scroll", () => {
-			if (window.scrollY > 10) {
+			if (window.scrollY > 150) {
 				setNavbar(false);
+				setnavsticky(true);
+			} else {
+				setnavsticky(false);
 			}
 		});
 	}, [navbar]);
 
 	return (
-		<div className="shadow shadow-[#ff670163] border-b-[1px] border-[#ff6701b2]">
+		<div
+			className={`flex items-center justify-between shadow shadow-[#ff670163] border-b-[1px] border-[#ff6701b2] bg-white duration-300 sticky top-0 last:0 h-[70px] ${
+				navsticky ? "lg:h-[80px]" : "lg:h-[90px]"
+			} z-10`}
+		>
 			<div className="container">
-				<div className="flex items-center justify-between h-[70px]  lg:h-[80px]">
+				<div className="flex items-center justify-between">
 					<div className="loge z-40">
 						<Link href="/">
 							<Image
@@ -70,38 +78,37 @@ const Navbar = () => {
 						</Link>
 					</div>
 					{/* main menu  */}
-					<div className="menu max-md:hidden">
+					<div className="max-md:hidden ">
 						{links.map((link) => (
-							<div key={link.id} className="inline-block">
-								<Link
-									className="capitalize navbar__link"
-									href={link.url}
-								>
-									{link.title}
-								</Link>
-							</div>
+							<Link
+								className="capitalize navbar__link"
+								href={link.url}
+								key={link.id}
+							>
+								{link.title}
+							</Link>
 						))}
-						<Link href="#" className="custom_btn ml-[5px]">
+						<Link href="/login" className="custom_btn ml-[5px]">
 							login
 						</Link>
 					</div>
 					{/* nav toggle button */}
 
-					<div className="navbar group md:hidden" ref={ref}>
+					<div className="toggle_icon group md:hidden" ref={ref}>
 						<span
-							className={`navbar_span1 ${
+							className={`toggle_icon1 ${
 								navbar
 									? "after:rotate-45 after:top-[50%] after:translate-y-[-50%]"
 									: ""
 							}`}
 						></span>
 						<span
-							className={`navbar_span2 ${
+							className={`toggle_icon2 ${
 								navbar ? "after:hidden" : ""
 							}`}
 						></span>
 						<span
-							className={`navbar_span3 ${
+							className={`toggle_icon3 ${
 								navbar
 									? "after:rotate-[-45deg] after:top-[50%] after:translate-y-[-50%]"
 									: ""
@@ -127,7 +134,10 @@ const Navbar = () => {
 								</div>
 							))}
 							<div>
-								<Link href="#" className="custom_btn ml-[5px] ">
+								<Link
+									href="/login"
+									className="custom_btn ml-[5px] "
+								>
 									login
 								</Link>
 							</div>
