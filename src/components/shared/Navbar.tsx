@@ -14,12 +14,12 @@ const links = [
 	{
 		id: 2,
 		title: "Find-Product",
-		url: "/find-product",
+		url: "/findProduct",
 	},
 	{
 		id: 3,
 		title: "Price-Comparison",
-		url: "/price-comparison",
+		url: "/priceComparison",
 	},
 	{
 		id: 5,

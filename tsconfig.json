@@ -34,7 +34,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/components/shared/Nav.tsx"
-  ],
+, "src/components/findProduct"  ],
   "exclude": [
     "node_modules"
   ]
