@@ -1,5 +1,5 @@
-const gap = () => {
-	return <div></div>;
+const Gap = () => {
+	return <div className="h-[80px]"></div>;
 };
 
-export default gap;
+export default Gap;
