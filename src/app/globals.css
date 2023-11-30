@@ -9,7 +9,7 @@
 	/* header css  */
 	/* header menu-bar */
 	.navbar__link {
-		@apply relative after:duration-300 after:absolute after:content-[''] after:w-[0] hover:after:w-[100%] after:h-[2px] after:left-0 after:bottom-[-1px] after:bg-[#FF6801] text-[15px] mx-[8px] lg:mx-[15px];
+		@apply text-black relative after:duration-300 after:absolute after:content-[''] after:w-[0] hover:after:w-[100%] after:h-[2px] after:left-0 after:bottom-[-1px] after:bg-[#FF6801] text-[15px] mx-[8px] lg:mx-[15px];
 	}
 
 	/* header navbar */
