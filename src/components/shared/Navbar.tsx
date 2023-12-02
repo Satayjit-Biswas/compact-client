@@ -4,6 +4,7 @@ import logo from "@/assets/logo1.png";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import Profile from "../dashbord/Profile";
 
 const links = [
 	{
@@ -25,11 +26,6 @@ const links = [
 		id: 5,
 		title: "About",
 		url: "/about",
-	},
-	{
-		id: 6,
-		title: "Contact",
-		url: "/contact",
 	},
 ];
 const Navbar = () => {
@@ -91,6 +87,7 @@ const Navbar = () => {
 						<Link href="/login" className="custom_btn ml-[5px]">
 							login
 						</Link>
+						<Profile></Profile>
 					</div>
 					{/* nav toggle button */}
 
