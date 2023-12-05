@@ -4,7 +4,7 @@ import logo from "@/assets/logo1.png";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import Profile from "../dashbord/Profile";
+import ProfileMenu from "./ProfileMenu";
 
 const links = [
 	{
@@ -74,7 +74,7 @@ const Navbar = () => {
 						</Link>
 					</div>
 					{/* main menu  */}
-					<div className="max-md:hidden ">
+					<div className="max-md:hidden flex items-center">
 						{links.map((link) => (
 							<Link
 								className="capitalize navbar__link"
@@ -87,7 +87,7 @@ const Navbar = () => {
 						<Link href="/login" className="custom_btn ml-[5px]">
 							login
 						</Link>
-						<Profile></Profile>
+						<ProfileMenu></ProfileMenu>
 					</div>
 					{/* nav toggle button */}
 

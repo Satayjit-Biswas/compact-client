@@ -1,11 +1,11 @@
 import { FaCamera } from "react-icons/fa";
 
-const FindInput = () => {
+const CompariInput = () => {
 	return (
 		<div>
 			<div className="container">
 				<h3 className="text-[40px] text-center mb-[20px] capitalize">
-					Find Your Product
+					Comparison Your Product
 				</h3>
 				<div className="flex justify-center items-center ">
 					<div className="w-[400px] text-center relative">
@@ -16,7 +16,10 @@ const FindInput = () => {
 							id=""
 							placeholder="Type Your Product Name"
 						/>
-						<label htmlFor="myfile" className="absolute top-[17px] right-[10px] cursor-pointer hover:text-[#FF6801] duration-300">
+						<label
+							htmlFor="myfile"
+							className="absolute top-[17px] right-[10px] cursor-pointer hover:text-[#FF6801] duration-300"
+						>
 							<FaCamera />
 						</label>
 						<input
@@ -38,4 +41,4 @@ const FindInput = () => {
 	);
 };
 
-export default FindInput;
+export default CompariInput;
