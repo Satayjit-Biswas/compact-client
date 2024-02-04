@@ -1,8 +1,7 @@
+import Login from "@/components/Auth/Login";
 import Link from "next/link";
-import { CiLock } from "react-icons/ci";
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebookF, FaXTwitter } from "react-icons/fa6";
-import { LuUser } from "react-icons/lu";
 
 const page = () => {
 	return (
@@ -14,30 +13,7 @@ const page = () => {
 							<h3 className="text-center mb-[30px] text-[25px]">
 								Login
 							</h3>
-							<label className="mt-[10px] block">User Gmail</label>
-							<div className="login_input relative mt-[8px]">
-								<LuUser className="absolute text-[18px] left-[8px] top-[10px]" />
-								<input
-									type="text"
-									placeholder="Type Your Gmail"
-								/>
-							</div>
-							<label className="mt-[10px] block">Password</label>
-							<div className="login_input relative mt-[8px]">
-								<CiLock className="absolute text-[18px] left-[8px] top-[10px]" />
-								<input
-									type="password"
-									placeholder="Type your password"
-								/>
-							</div>
-							<div className="text-center">
-								<button
-									type="submit"
-									className="custom_btn mt-[20px] bg-white text-black"
-								>
-									Login
-								</button>
-							</div>
+							<Login></Login>
 						</div>
 						<p className="text-center text-white mt-[20px] capitalize">
 							login with others

@@ -1,6 +1,33 @@
+"use client";
+
 import { FaCamera } from "react-icons/fa";
 
 const FindInput = () => {
+	// const [product, setProduct] = useState();
+
+	// const fetchData = async () => {
+	// 	const options = {
+	// 		method: "GET",
+	// 		url: "https://mobile-phone-specs-database.p.rapidapi.com/gsm/get-models-by-brandname/Samsung",
+	// 		headers: {
+	// 			"X-RapidAPI-Key":
+	// 				"645e82075emshdc4610575c1025cp1262a7jsn56dcfd56848d",
+	// 			"X-RapidAPI-Host": "mobile-phone-specs-database.p.rapidapi.com",
+	// 		},
+	// 	};
+	// 	try {
+	// 		const response = await axios.request(options);
+	// 		setProduct(response.data);
+	// 	} catch (error) {
+	// 		console.error(error);
+	// 	}
+	// };
+	// useEffect(() => {
+	// 	fetchData(); // Call the asynchronous function
+	// }, []); // Pass an empty dependency array to run the effect only once when the component mounts
+
+	// console.log(product);
+
 	return (
 		<div>
 			<div className="container">
@@ -16,7 +43,10 @@ const FindInput = () => {
 							id=""
 							placeholder="Type Your Product Name"
 						/>
-						<label htmlFor="myfile" className="absolute top-[17px] right-[10px] cursor-pointer hover:text-[#FF6801] duration-300">
+						<label
+							htmlFor="myfile"
+							className="absolute top-[17px] right-[10px] cursor-pointer hover:text-[#FF6801] duration-300"
+						>
 							<FaCamera />
 						</label>
 						<input

@@ -1,8 +1,36 @@
+"use client";
+
 import profile from "@/assets/profile.png";
+import axios from "axios";
+import Cookies from "js-cookie";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 const Profile = () => {
+	const router = useRouter();
+
+	const logout = async () => {
+		try {
+			Cookies.remove("RefreshToken");
+			router.push("/login");
+			toast.success("Logout Successfully");
+			// Send data to the server using axios or fetch
+			const response = await axios.get(
+				`http://localhost:5000/api/user/logout`,
+				{ withCredentials: true }
+			);
+			// Cookies.remove("RefreshToken");
+			// router.push("/login");
+			// toast.success("Logout Successfully");
+		} catch (error) {
+			// Handle error, e.g., show error message
+			console.log(error);
+			// toast.error("Already Logout");
+		}
+	};
+
 	return (
 		<div className="join">
 			<div className="dropdown dropdown-end">
@@ -49,8 +77,9 @@ const Profile = () => {
 					</li>
 					<li>
 						<Link
-							href="/logout"
+							href="/"
 							className="hover:bg-[#FF6801] hover:text-[#ffffff] rounded-[0px]"
+							onClick={() => logout()}
 						>
 							Logout
 						</Link>

@@ -7,13 +7,7 @@ const About = () => {
 			<div className="hero min-h-screen">
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
 					<div className="about-img">
-						<Image
-							src={about}
-							alt="s1"
-							width={1920}
-							height={1372}
-							className="w-[100%] lg:w-[100%] md:w-[430px]"
-						/>
+						<Image src={about} alt="s1" />
 					</div>
 					<div>
 						<h1 className="text-5xl font-bold">About Us</h1>

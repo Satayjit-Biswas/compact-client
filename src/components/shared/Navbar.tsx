@@ -4,6 +4,7 @@ import logo from "@/assets/logo1.png";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { ToastContainer } from "react-toastify";
 import ProfileMenu from "./ProfileMenu";
 
 const links = [
@@ -28,10 +29,13 @@ const links = [
 		url: "/about",
 	},
 ];
+
 const Navbar = () => {
 	const [navbar, setNavbar] = useState(false);
 	const [navsticky, setnavsticky] = useState(false);
 	const ref = useRef(null);
+
+	// const { userdata } = GetUserData();
 
 	useEffect(() => {
 		const handleOutSideClick = (event: any) => {
@@ -53,13 +57,24 @@ const Navbar = () => {
 			}
 		});
 	}, [navbar]);
-
 	return (
 		<div
 			className={`flex items-center justify-between shadow shadow-[#ff670163] border-b-[1px] border-[#ff6701b2] bg-white duration-300 sticky top-0 last:0 h-[70px] ${
 				navsticky ? "lg:h-[80px]" : "lg:h-[90px]"
 			} z-10`}
 		>
+			<ToastContainer
+				position="top-center"
+				autoClose={3000}
+				hideProgressBar={false}
+				newestOnTop={false}
+				closeOnClick
+				rtl={false}
+				pauseOnFocusLoss
+				draggable
+				pauseOnHover
+				theme="light"
+			></ToastContainer>
 			<div className="container">
 				<div className="flex items-center justify-between">
 					<div className="loge z-40">
@@ -88,6 +103,14 @@ const Navbar = () => {
 							login
 						</Link>
 						<ProfileMenu></ProfileMenu>
+
+						{/* {userdata.email ? (
+							<ProfileMenu></ProfileMenu>
+						) : (
+							<Link href="/login" className="custom_btn ml-[5px]">
+								login
+							</Link>
+						)} */}
 					</div>
 					{/* nav toggle button */}
 
@@ -130,6 +153,20 @@ const Navbar = () => {
 									</Link>
 								</div>
 							))}
+
+							{/* {userdata.name ? (
+								<ProfileMenu></ProfileMenu>
+							) : (
+								<div>
+									<Link
+										href="/login"
+										className="custom_btn ml-[5px] "
+									>
+										login
+									</Link>
+								</div>
+							)} */}
+
 							<div>
 								<Link
 									href="/login"
@@ -138,6 +175,8 @@ const Navbar = () => {
 									login
 								</Link>
 							</div>
+
+							<ProfileMenu></ProfileMenu>
 						</div>
 					</div>
 				</div>
